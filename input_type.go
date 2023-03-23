@@ -1,10 +1,14 @@
 package main
 
+import "strings"
+
 func inputType(line string) string {
-	switch line {
-	case "NAME                                                   READY   STATUS    RESTARTS   AGE":
+
+	noSpaces := strings.ReplaceAll(line, " ", "")
+	switch noSpaces {
+	case "NAMEREADYSTATUSRESTARTSAGE":
 		return "pod_list"
-	case "NAME                                               TYPE                                  DATA   AGE":
+	case "NAMETYPEDATAAGE":
 		return "secret_list"
 	}
 	return ""
