@@ -10,6 +10,9 @@ func inputType(line string) string {
 		return "pod_list"
 	case "NAMETYPEDATAAGE":
 		return "secret_list"
+	case "NAMESTATUSAGE":
+		return "namespace_list"
 	}
+
 	return ""
 }

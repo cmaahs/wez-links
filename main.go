@@ -77,6 +77,8 @@ func main() {
 				line = decoratePodLine(line, termFormatter)
 			case "secret_list":
 				line = decorateSecretLine(line, termFormatter)
+			case "namespace_list":
+				line = decorateNamespaceLine(line, termFormatter)
 			}
 		}
 		fmt.Printf("%s\n", line)
